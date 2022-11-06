@@ -5,6 +5,8 @@ namespace CaioMarcatti12\CacheManager;
 
 use CaioMarcatti12\CacheManager\Interfaces\CacheInterface;
 use CaioMarcatti12\Core\Factory\Annotation\Autowired;
+use CaioMarcatti12\Core\Modules\Modules;
+use CaioMarcatti12\Core\Modules\ModulesEnum;
 use CaioMarcatti12\Core\Validation\Assert;
 use CaioMarcatti12\Data\ObjectMapper;
 use CaioMarcatti12\Env\Annotation\Value;
@@ -19,6 +21,8 @@ class CacheManager implements CacheInterface
 
     public function get(string $key, mixed $default = null): mixed
     {
+        if(!$this->cacheIsEnabled()) return null;
+
         $key = $this->makeKey($key);
         $value = $this->cache->get($key, $default);
 
@@ -36,6 +40,8 @@ class CacheManager implements CacheInterface
 
     public function set(string $key, mixed $value = null, int $ttl = -1): void
     {
+        if(!$this->cacheIsEnabled()) return;
+
         $key = $this->makeKey($key);
         $type = gettype($value);
 
@@ -53,12 +59,18 @@ class CacheManager implements CacheInterface
 
     public function del(string $key): void
     {
+        if(!$this->cacheIsEnabled()) return;
+
         $key = $this->makeKey($key);
         $this->cache->del($key);
     }
 
+    private function cacheIsEnabled(): bool{
+        return Modules::isEnabled(ModulesEnum::CACHE);
+    }
+
     private function makeKey(string $key): string{
-        $key = $this->applicationName.'-'.$key;
+        $key = $this->applicationName.'_'.$key;
         $key = str_replace(" ","_",preg_replace("/&([a-z])[a-z]+;/i", "$1", htmlentities(trim($key))));
 
         return $key;
