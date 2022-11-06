@@ -2,6 +2,7 @@
 
 namespace CaioMarcatti12\Event;
 
+use CaioMarcatti12\CacheManager\Adapter\RedisCacheAdapter;
 use CaioMarcatti12\CacheManager\Interfaces\CacheInterface;
 use CaioMarcatti12\Core\Bean\Objects\BeanProxy;
 use CaioMarcatti12\Core\Launcher\Annotation\Launcher;
@@ -14,6 +15,5 @@ class CacheManagerLoader implements LauncherInterface
     public function handler(): void
     {
         BeanProxy::add(CacheInterface::class, RedisCacheAdapter::class);
-
     }
 }
