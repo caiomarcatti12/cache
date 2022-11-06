@@ -16,7 +16,7 @@ class CacheManager implements CacheInterface
     #[Autowired]
     private CacheInterface $cache;
 
-    #[Value('application.name')]
+    #[Value('application.name', 'default')]
     private string $applicationName;
 
     public function get(string $key, mixed $default = null): mixed
