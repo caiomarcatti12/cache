@@ -1,6 +1,6 @@
 <?php
 
-namespace CaioMarcatti12\Event;
+namespace CaioMarcatti12\CacheManager;
 
 use CaioMarcatti12\CacheManager\Adapter\RedisCacheAdapter;
 use CaioMarcatti12\CacheManager\Interfaces\CacheInterface;
