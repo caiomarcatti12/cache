@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/core.git",
-                "reference": "861b17829005fcaa8b653a5e4e407008267991d7"
+                "reference": "e4e2d4ba2024dec3e1f8d20971c38ee274d17961"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/861b17829005fcaa8b653a5e4e407008267991d7",
-                "reference": "861b17829005fcaa8b653a5e4e407008267991d7",
+                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/e4e2d4ba2024dec3e1f8d20971c38ee274d17961",
+                "reference": "e4e2d4ba2024dec3e1f8d20971c38ee274d17961",
                 "shasum": ""
             },
             "default-branch": true,
@@ -41,7 +41,7 @@
                 "issues": "https://github.com/caiomarcatti12/core/issues",
                 "source": "https://github.com/caiomarcatti12/core/tree/master"
             },
-            "time": "2022-11-05T22:28:10+00:00"
+            "time": "2022-11-07T11:38:20+00:00"
         },
         {
             "name": "caiomarcatti12/data",
@@ -89,12 +89,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/env.git",
-                "reference": "7aea949bc69aa1008d487f74c6b89badc5c412e6"
+                "reference": "234dbc7f63b087f7953c302ca2e0f976471301c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/env/zipball/7aea949bc69aa1008d487f74c6b89badc5c412e6",
-                "reference": "7aea949bc69aa1008d487f74c6b89badc5c412e6",
+                "url": "https://api.github.com/repos/caiomarcatti12/env/zipball/234dbc7f63b087f7953c302ca2e0f976471301c7",
+                "reference": "234dbc7f63b087f7953c302ca2e0f976471301c7",
                 "shasum": ""
             },
             "require": {
@@ -117,12 +117,11 @@
                     "email": "caiomarcatti12@gmail.com"
                 }
             ],
-            "description": "Minha ",
             "support": {
                 "issues": "https://github.com/caiomarcatti12/env/issues",
                 "source": "https://github.com/caiomarcatti12/env/tree/master"
             },
-            "time": "2022-11-05T11:59:59+00:00"
+            "time": "2022-11-06T12:51:11+00:00"
         },
         {
             "name": "predis/predis",
