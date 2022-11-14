@@ -23,6 +23,8 @@ class RedisCacheAdapter implements CacheInterface
 
         if($sentinel){
             $options = ['replication' => $replication, 'service' => $service];
+        }else{
+            $options = ['cluster' => 'redis'];
         }
 
         $this->redis = new Client(["tcp://{$host}:{$port}"], $options);
