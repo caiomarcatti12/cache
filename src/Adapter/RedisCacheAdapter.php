@@ -2,10 +2,10 @@
 
 namespace CaioMarcatti12\CacheManager\Adapter;
 
+use CaioMarcatti12\CacheManager\Interfaces\CacheInterface;
 use CaioMarcatti12\Core\Validation\Assert;
 use CaioMarcatti12\Env\Objects\Property;
 use Predis\Client;
-use CaioMarcatti12\CacheManager\Interfaces\CacheInterface;
 
 class RedisCacheAdapter implements CacheInterface
 {

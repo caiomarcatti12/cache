@@ -4,10 +4,10 @@ namespace CaioMarcatti12\CacheManager\Resolver;
 
 use CaioMarcatti12\CacheManager\Annotation\EnableCache;
 use CaioMarcatti12\CacheManager\Interfaces\CacheInterface;
-use ReflectionClass;
 use CaioMarcatti12\Core\Bean\Annotation\AnnotationResolver;
 use CaioMarcatti12\Core\Bean\Interfaces\ClassResolverInterface;
 use CaioMarcatti12\Core\Bean\Objects\BeanProxy;
+use ReflectionClass;
 
 #[AnnotationResolver(EnableCache::class)]
 class EnableCacheResolver  implements ClassResolverInterface
